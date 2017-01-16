@@ -1,0 +1,107 @@
+/*I am targeting ul inside of .nav because I would probably 
+want different styling on non-navigational unordered lists.*/
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+/*On the list items inside of nav (.nav li) I will set the typography.
+*/
+ .nav li {
+  font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+/*Finally, I’ll turn off the underlines and make the text white in the links.
+*/
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+/*I have an active class on the “news” link right now. I can style the active links with this.
+*/
+
+ .nav a.active {
+/**/      color: #444;
+    }
+
+
+/*Then I can target the .nav li inside of the media query. So when on a screen that is at least 600px wide it will use this code:
+*/
+@media screen and (min-width: 600px) {
+    .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    }
+
+    .nav li {
+    display: inline-block;
+    margin-right: -4px;
+    }
+
+}
+
+* {
+  margin :0;
+  padding: 0;
+  border: 0;
+ font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 275%;
+  color: grey;
+/*  text-transform: uppercase;
+*/  letter-spacing:  1%
+  margin: 45% 0;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  height: 100px;
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 320%;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing:  1%
+  height: 200px;
+
+
+}
+
+/*-------- Parallax starting ---------*/
+
+.parallax {
+  background: url(about.png) fixed 100%;
+    background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center;
+  
+}
+
+.parallax-inner {
+  padding-top : 15%;
+  padding-bottom: 15%;
+}

@@ -1,0 +1,92 @@
+/*I am targeting ul inside of .nav because I would probably 
+want different styling on non-navigational unordered lists.*/
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+/*On the list items inside of nav (.nav li) I will set the typography.
+*/
+ .nav li {
+  font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+/*Finally, I’ll turn off the underlines and make the text white in the links.
+*/
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+/*I have an active class on the “news” link right now. I can style the active links with this.
+*/
+
+ .nav a.active {
+/**/      color: #444;
+    }
+
+
+/*Then I can target the .nav li inside of the media query. So when on a screen that is at least 600px wide it will use this code:
+*/
+@media screen and (min-width: 600px) {
+    .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    }
+
+    .nav li {
+    display: inline-block;
+    margin-right: -4px;
+    }
+
+}
+
+.welcome {
+	background-image: url(front.png); 
+	height: 460px;
+	background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center;
+
+/*	max-width:100%;
+	max-height:100%;
+    object-fit: cover;*/
+
+}
+
+/*html {
+	height: 100%;
+	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}*/
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#map_canvas {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    top: 500px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
